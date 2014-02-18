@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>box</title>
+<style>
+	.pack{display:-webkit-box;-webkit-box-orient: vertical;-webkit-box-pack:justify;-webkit-box-align:center;width:500px;height:500px;border:solid 1px black}
+	.a{width:150px;height:100px;background:red}
+	.b{width:100px;height:100px;background:blue}
+	.c{width:100px;height:100px;background:green}
+
+
+.align{position:absolute;top:0;display:-webkit-box;-webkit-box-orient:horizontal;;border:solid 1px black;width:100px;height:300px}
+.start{-webkit-box-align:start}
+.end{left:110px;-webkit-box-align:end}
+.center{left:220px;-webkit-box-align:center}
+.baseline{left:330px;-webkit-box-align:baseline}
+.stretch{left:440px;-webkit-box-align:stretch}
+.horizontal .align.stretch div{width:20px;height:auto}
+
+.vertical .align{position:relative;-webkit-box-orient:vertical;top:0;left:0;width:500px;height:100px}
+.vertical .stretch div{width:auto;height:20px}
+
+/* layout */
+h2{font-size:12px;}
+.align div{width:100px;height:20px;}
+.horizontal .align div{width:20px;height:100px}
+.align .a{background:red}
+.align .b{background:blue}
+.align .c{background:green}
+.horizontal{height:400px}
+.horizontal .align{top:30px}
+.horizontal h2{position:absolute;top:0;left:0}
+.horizontal h2+h2{left:110px}
+.horizontal h2+h2+h2{left:220px}
+.horizontal h2+h2+h2+h2{left:330px}
+.horizontal h2+h2+h2+h2+h2{left:440px}
+	
+</style>
+</head>
+<body>
+<div id="wrap">
+	<div class="pack">
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+	</div>
+
+<br />
+<h1>레아이웃 수직</h1>
+<div class="vertical" style="position:relative">
+	<h2>start</h2>
+	<div class="align start">
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+	</div>
+<h2>end</h2>
+	<div class="align end">
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+	</div>
+<h2>center</h2>
+	<div class="align center">
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+	</div>
+<h2>baseline</h2>
+	<div class="align baseline">
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+	</div>
+<h2>stretch</h2>
+	<div class="align stretch">
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+	</div>
+</div>
+
+<h1>레아이웃 수평</h1>
+<div class="horizontal" style="position:relative">
+	<h2>start</h2><h2>end</h2><h2>center</h2><h2>baseline</h2><h2>stretch</h2>
+	<div class="align start">
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+	</div>
+
+	<div class="align end">
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+	</div>
+
+	<div class="align center">
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+	</div>
+
+	<div class="align baseline">
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+	</div>
+
+	<div class="align stretch">
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+	</div>
+</div>
+
+</div>
+</body>
+</html>
